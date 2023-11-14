@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link rel="stylesheet" href="style.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <!-- Day.js -->
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"></script>
+  <link rel="stylesheet" href="./assets/style.css">
+  <title>Project Tracker</title>
+</head>
+<body>
+  <div class="jumbotron text-center">
+    <h1>Welcome to Project Tracker</h1>
+    <p id="current-time"></p>
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">How to Use This App</h5>
+        <p class="card-text">Add your projects using the form and track them!</p>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#projectModal">
+          Add New Project
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="projectModal" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="projectModalLabel">New Project</h5>
+            <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="project-form">
+              <div class="form-group">
+                <label for="project-name">Project Name</label>
+                <input type="text" class="form-control" id="project-name" required>
+              </div>
+              <div class="form-group">
+                <label for="project-type">Project Type</label>
+                <select class="form-control" id="project-type">
+                  <option>Web Development</option>
+                  <option>Mobile Application</option>
+                  <option>Software Development</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="project-due-date">Due Date</label>
+                <input type="date" class="form-control" id="project-due-date" required>
+              </div>
+              <button type="submit" class="btn btn-primary">Save Project</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project Table -->
+    <table class="table table-striped mt-4">
+      <thead>
+        <tr>
+          <th>Project Name</th>
+          <th>Project Type</th>
+          <th>Due Date</th>
+        </tr>
+      </thead>
+      <tbody id="project-table-body">
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Bootstrap JS, Popper.js, and jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- Custom JavaScript -->
+  <script src="./assets/script.js"></script>
+</body>
+</html>
