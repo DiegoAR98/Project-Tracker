@@ -1,53 +1,118 @@
 body {
-    font-family: 'Roboto', sans-serif;
-    background: linear-gradient(to right, #6dd5ed, #2193b0); /* Blue gradient background */
-    color: white;
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-  }
-  
+  font-family: 'Roboto', sans-serif;
+  background: #f2f2f2; /* Off-white background */
+  color: #003366; /* Navy Blue for text */
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.jumbotron {
+  background: #003366; /* Navy Blue background */
+  color: #ffffff; /* White text */
+  padding: 2rem 1rem;
+  border-radius: 0;
+  margin-bottom: 2rem;
+}
+
+.jumbotron h1 {
+  color: #ff6600; /* Orange for headings */
+}
+
+.container {
+  padding: 2rem;
+  background: #f0f0f0; /* Light Gray background */
+  border-radius: 10px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.table {
+  color: #003366; /* Navy Blue for table text */
+}
+
+.card {
+  background: #d9d9d9; /* Light Gray for card */
+  color: #003366; /* Navy Blue for card text */
+}
+
+.card-body {
+  color: #003366; /* Navy Blue for card body text */
+}
+
+.btn-primary {
+  background-color: #ff6600; /* Orange for primary buttons */
+  border-color: #ff6600;
+}
+
+.btn-primary:hover {
+  background-color: #cc5200; /* Darker Orange on hover */
+  border-color: #cc5200;
+}
+
+.btn-danger {
+  background-color: #dc3545; /* Keep Bootstrap's danger color */
+  border-color: #dc3545;
+}
+
+.modal-content {
+  background-color: #ffffff; /* White for modal content */
+  color: #003366; /* Navy Blue for modal text */
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
   .jumbotron {
-    background: rgba(0, 0, 0, 0.5); /* Slightly transparent black */
-    padding: 2rem 1rem;
-    border-radius: 0;
-    margin-bottom: 2rem;
+      padding: 1rem;
   }
-  
-  .jumbotron h1 {
-    color: #fff;
-  }
-  
+
   .container {
-    padding: 2rem;
-    background: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
-    border-radius: 10px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      padding: 1rem;
   }
-  
-  .table {
-    color: black;
-  }
-  
+
   .card {
-    background: rgba(0, 0, 0, 0.5); /* Slightly transparent black */
+      margin-bottom: 1rem;
   }
-  
-  .card-body {
-    color: #fff;
+
+  .modal-dialog {
+      max-width: 95%;
   }
-  
-  .btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
+}
+
+@media (max-width: 576px) {
+  body {
+      font-size: 14px; /* Smaller font size for smaller devices */
   }
-  
-  .btn-danger {
-    background-color: #dc3545;
-    border-color: #dc3545;
+
+  .jumbotron h1 {
+      font-size: 24px; /* Larger heading for visibility */
   }
-  
-  .modal-content {
-    background-color: white;
-    color: black;
+
+  .btn {
+      padding: .5rem 1rem;
+      font-size: 14px; /* Larger buttons for easier interaction */
   }
+
+  .modal-dialog {
+      max-width: 100%;
+      margin: 0.5rem;
+  }
+
+  .modal-body, .modal-header {
+      padding: 1rem;
+  }
+
+  .form-group label, .form-control {
+      font-size: 14px;
+  }
+
+  .form-control {
+      padding: .375rem .75rem;
+  }
+
+  /* Adjustments for smaller screens */
+  .card, .table {
+      margin-bottom: 0.5rem;
+  }
+}
