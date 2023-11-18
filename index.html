@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><link rel="stylesheet" href="style.css">
+<head>
   <!-- Bootstrap CSS -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/style.css">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <!-- Day.js -->
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"></script>
-  <link rel="stylesheet" href="./assets/style.css">
+ 
   <title>Project Tracker</title>
 </head>
 <body>
-  <div class="jumbotron text-center">
+  <header class="jumbotron text-center">
     <h1>Welcome to Project Tracker(DEMO)</h1>
     <p id="current-time"></p>
-  </div>
+  </header>
 
-  <div class="container">
-    <div class="card">
+  <main class="container">
+    <article class="card">
       <div class="card-body">
         <h5 class="card-title">Get Started with Project Tracker</h5>
         <p class="card-text">Begin by adding your projects through our simple form.</p>
@@ -27,7 +29,7 @@
           Add New Project
         </button>
       </div>
-    </div>
+    </article>
 
     <!-- Modal -->
     <div class="modal fade" id="projectModal" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel" aria-hidden="true">
@@ -49,7 +51,6 @@
                   <option>College</option>
                   <option>Internship</option>
                   <option>Extracurricular activities</option>
-                  <option>Certificates</option>
                 </select>
               </div>
               <div class="form-group">
@@ -64,18 +65,20 @@
     </div>
 
     <!-- Project Table -->
-    <table class="table table-striped mt-4">
-      <thead>
-        <tr>
-          <th>Project Name</th>
-          <th>Project Type</th>
-          <th>Due Date</th>
-        </tr>
-      </thead>
-      <tbody id="project-table-body">
-      </tbody>
-    </table>
-  </div>
+    <section>
+      <table class="table table-striped mt-4">
+        <thead>
+          <tr>
+            <th>Project Name</th>
+            <th>Project Type</th>
+            <th>Due Date</th>
+          </tr>
+        </thead>
+        <tbody id="project-table-body">
+        </tbody>
+      </table>
+    </section>
+  </main>
 
   <!-- Bootstrap JS, Popper.js, and jQuery -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
