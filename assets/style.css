@@ -1,6 +1,6 @@
 body {
   font-family: 'Roboto', sans-serif;
-  background: linear-gradient(to right, #003366, #000080); /* Dark Blue Gradient Background */
+  background: linear-gradient(to right, #004488, #002244); /* Dark Blue Gradient for Jumbotron */
   color: #d9d9d9; /* Light Grey Text */
   min-height: 100vh;
   margin: 0;
@@ -36,7 +36,10 @@ body {
   background: linear-gradient(to right, #ff0000, #cc0000) !important;
   color: black !important;
 }
-
+.table thead th {
+  border: none;
+  color: white;
+}
 .table {
   width: 90%;
   margin: 0 auto;
@@ -71,6 +74,7 @@ body {
 
 .card-body {
   color: #d9d9d9;
+  text-align: center;
 }
 
 .btn-primary {
